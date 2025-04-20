@@ -2,9 +2,8 @@ import { loginPage } from "../pages/loginPage"
 import loginData from "../../fixtures/loginData.json"
 
 const loginObj = new loginPage()
-
+//hello
 describe('Login Page Automation',()=>{
-
 
 before(function(){
   
