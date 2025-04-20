@@ -5,8 +5,8 @@ const registerObj = new registerPage()
 
 describe('Registration flow',()=>{
 
-
-    it('create a new user account',()=>{
+  
+  it('create a new user account',()=>{
       
       registerObj.visitRegisterPage()
       registerObj.enterFirstName(registerData.fname)
