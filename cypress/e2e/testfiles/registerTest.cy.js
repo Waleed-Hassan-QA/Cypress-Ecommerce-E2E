@@ -5,7 +5,6 @@ const registerObj = new registerPage()
 
 describe('Registration flow',()=>{
 
-  
   it('create a new user account',()=>{
       
       registerObj.visitRegisterPage()
@@ -19,7 +18,6 @@ describe('Registration flow',()=>{
 
 
     })
-
 
 
 })

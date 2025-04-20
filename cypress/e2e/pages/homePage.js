@@ -1,4 +1,4 @@
-export class registerPage{
+export class homePage{
 
     SearchProductLocator = {
           

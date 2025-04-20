@@ -13,7 +13,7 @@ locators = {
 }
 
 visitRegisterPage(){
-    cy.visit(Cypress.env('URL')) 
+    cy.visit(Cypress.env('RegisterURL')) 
 }
 
 enterFirstName(fname){
