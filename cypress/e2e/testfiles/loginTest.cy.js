@@ -15,6 +15,7 @@ before(function(){
       
       loginObj.login_With_Valid_Credentials(loginData.email,loginData.password)
       loginObj.verifyLogin().contains(loginData.expectedUsername)
+     // loginObj.verifyFromTxt().should('have.text',loginData.myAccountTxt)
 
     })
 

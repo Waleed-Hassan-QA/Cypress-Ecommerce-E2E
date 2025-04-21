@@ -1,10 +1,10 @@
 export class loginPage{
     locators = {
-
         email:'#email',
         password:'#pass',
         loginBtn:'#send2',
-        isLoginDone:'div[class="panel header"] span[class="logged-in"]'
+        isLoginDone:'div[class="panel header"] span[class="logged-in"]',
+        myAccountTxt:'.base'
     }
 
 visitLoginPage(){
@@ -19,6 +19,9 @@ login_With_Valid_Credentials(email,password){
 
 verifyLogin(){
    return cy.get(this.locators.isLoginDone)
+}
+verifyFromTxt(){
+   return cy.get(this.locators.myAccountTxt)
 }
 
 }

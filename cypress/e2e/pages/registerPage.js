@@ -1,7 +1,6 @@
 export class registerPage{
 
-locators = {
-      
+locators = {    
     firstname: '#firstname',
     lastname: '#lastname',
     email: '#email_address',
@@ -9,7 +8,6 @@ locators = {
     confirmPassword: '#password-confirmation',
     createButton: 'button[title="Create an Account"]',
     verifySuccessMessage: 'div[data-bind="html: $parent.prepareMessageForHtml(message.text)"]'
-
 }
 
 visitRegisterPage(){

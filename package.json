@@ -18,5 +18,8 @@
   "description": "",
   "devDependencies": {
     "cypress": "^14.3.1"
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.14.0"
   }
 }

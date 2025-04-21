@@ -1,0 +1,24 @@
+{
+    "login":{
+        "email":"Waleedtest01@gmail.com",
+        "password":"User@123"
+    },
+
+    "title":{
+
+        "pageTitle": "Home Page"
+     },
+
+    "product":{
+
+        "productName": "Orion Two-Tone Fitted Jacket"
+
+    },
+   
+    "message":{
+
+          "successMessage": "You added"
+    }
+ 
+  }
+  

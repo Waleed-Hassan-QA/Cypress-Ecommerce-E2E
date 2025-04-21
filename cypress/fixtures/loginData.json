@@ -2,6 +2,7 @@
    
     "email": "Waleedtest01@gmail.com",
     "password": "User@123",
-    "expectedUsername": "Waleed Hassan"
+    "expectedUsername": "Waleed Hassan",
+    "myAccountTxt": "My Account"
   }
   
