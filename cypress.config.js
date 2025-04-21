@@ -2,6 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
+    baseUrl:'https://magento.softwaretestingboard.com',
     watchForFileChanges: false,
     setupNodeEvents(on, config) {
       // implement node event listeners here
@@ -9,7 +10,7 @@ module.exports = defineConfig({
     },
   },
   env:{
-    RegisterURL:'https://magento.softwaretestingboard.com/customer/account/create/' ,
-    LoginURL:'https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
-  },
+    register_Url:'/customer/account/create/',
+    login_Url:'/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
+  }
 });

@@ -1,5 +1,4 @@
 export class loginPage{
-    
     locators = {
 
         email:'#email',
@@ -9,7 +8,7 @@ export class loginPage{
     }
 
 visitLoginPage(){
-    cy.visit(Cypress.env('LoginURL'))
+    cy.visit('/' + Cypress.env('login_Url'))
 }
 
 login_With_Valid_Credentials(email,password){
