@@ -5,7 +5,7 @@ import productData from "../../fixtures/productData.json"
 const homePageObj = new homePage()
 
 //hello
-describe('Home Page Automation',()=>{
+describe('Search & Add Product',()=>{
 
 before(function(){
   
@@ -15,7 +15,7 @@ before(function(){
 
 })
 
-  it('search & add product into cart',()=>{
+  it('add to cart',()=>{
       
     homePageObj.searchProduct(productData.product.productName)
     homePageObj.addToCart()
