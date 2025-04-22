@@ -1,8 +1,33 @@
 {
-   
+   "login":{
+
     "email": "Waleedtest01@gmail.com",
     "password": "User@123",
     "expectedUsername": "Waleed Hassan",
     "myAccountTxt": "My Account"
+   },
+
+   "invalidUsernamePassword":{
+    "email": "testingdata@gmail.com",
+    "password": "12367897"
+   },
+
+   "validUsername_InvalidPassword":{
+    "email": "waleedtest01@gmail.com",
+    "password": "123456"
+   },
+
+   "invalidUsername_ValidPassword":{
+    "email": "testingdata@gmail.com",
+    "password": "User@123"
+   },
+
+   "errors":{
+    "ErrorMessage":"The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.",
+    "ReqEmail":"This is a required field.",
+    "ReqPassword":"This is a required field."
+   }
+
+   
   }
   

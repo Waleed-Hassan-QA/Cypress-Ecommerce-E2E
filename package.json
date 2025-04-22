@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test:login": "npx cypress run --spec cypress/e2e/testfiles/loginTest.cy.js",
     "test:addtocart": "npx cypress run --spec cypress/e2e/testfiles/homePageTest.cy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
