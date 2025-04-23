@@ -46,10 +46,12 @@ empty_username_password(){
     cy.get(this.locators.loginBtn).click()
 }
 
+// Success Messages Functions
 loginSuccessMessage(){
    return cy.get(this.locators.isLoginDone)
 }
 
+// Error Messages Functions
 loginErrorMessage(){
     return cy.get(this.locators.login_error);
  }

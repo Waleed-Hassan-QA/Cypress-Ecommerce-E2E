@@ -11,8 +11,16 @@
 
     "product":{
 
-        "productName": "Orion Two-Tone Fitted Jacket"
+        "productName": "Orion Two-Tone Fitted Jacket",
+        "price":"$72.00",
+        "Size":"XS",
+        "color":"Black",
+        "quantity":1
 
+    },
+
+    "removeProduct":{
+        "successMessage":"You have no items in your shopping cart."
     },
    
     "message":{
