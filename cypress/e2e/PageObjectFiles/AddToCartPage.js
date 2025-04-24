@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-export class homePage{
+export class AddToCartPage{
 
     Locators = {
         search_input:'#search',
@@ -17,17 +17,14 @@ export class homePage{
   }
 
   addToCart(){
-
     cy.scrollTo(0, 50)
     cy.get(this.Locators.size).first().click()
     cy.get(this.Locators.color).first().click()
     cy.get(this.Locators.find_addtocart).realHover()
     cy.get(this.Locators.addtocart).click({force: true})
-   
     }
 
     verifySuccessMessage(){
-
         return cy.get(this.Locators.successMessage);
     }
 }

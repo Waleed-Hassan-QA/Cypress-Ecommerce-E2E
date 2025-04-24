@@ -1,4 +1,4 @@
-import { registerPage } from "../pages/registerPage"
+import { registerPage } from "../PageObjectFiles/Auth/registerPage"
 import registerData from "../../fixtures/registerData.json"
 
 const registerObj = new registerPage()
@@ -15,7 +15,6 @@ describe('Registration flow',()=>{
       registerObj.enterConfirmPassword(registerData.confirmPassword)
       registerObj.CreateAccount()
       registerObj.getSuccessMessage().should('have.text',registerData.expectedSuccessMessage)
-
 
     })
 

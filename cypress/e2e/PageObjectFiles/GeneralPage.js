@@ -1,4 +1,4 @@
-export class generalPage{
+export class GeneralPage{
 
 
     pages = {

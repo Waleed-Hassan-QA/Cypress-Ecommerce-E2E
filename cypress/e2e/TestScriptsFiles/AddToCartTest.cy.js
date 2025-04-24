@@ -1,8 +1,8 @@
-import { homePage } from "../pages/homePage"
+import { AddToCartPage } from "../PageObjectFiles/AddToCartPage"
 import loginData from "../../fixtures/loginData.json"
 import productData from "../../fixtures/productData.json"
 
-const homePageObj = new homePage()
+const addTocartObj = new AddToCartPage()
 
 //hello
 describe('Search & Add Product',()=>{
@@ -15,13 +15,11 @@ before(function(){
 
 })
 
-  it('add to cart',()=>{
-      
-    homePageObj.searchProduct(productData.product.productName)
-    homePageObj.addToCart()
-    homePageObj.verifySuccessMessage().should('contain',productData.message.successMessage)
+  it('add to cart',()=>{    
+    addTocartObj.searchProduct(productData.product.productName)
+    addTocartObj.addToCart()
+    addTocartObj.verifySuccessMessage().should('contain',productData.message.successMessage)
                                        .and('contain',productData.product.productName)
-
     })
 
 })

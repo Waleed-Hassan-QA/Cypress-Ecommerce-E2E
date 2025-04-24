@@ -1,17 +1,16 @@
 /// <reference types="Cypress" />
 
-import { checkoutPage } from "../pages/checkoutPage"
-import { homePage } from "../pages/homePage"
+import { CheckoutPage } from "../PageObjectFiles/checkoutPage"
+import { AddToCartPage } from "../PageObjectFiles/AddToCartPage"
 
-const checkoutPageObj = new checkoutPage()
-const searchProduct = new homePage()
+const checkoutPageObj = new CheckoutPage()
+const searchProduct = new AddToCartPage()
 
 var user = require('../../fixtures/productData.json')
 var product = require('../../fixtures/productData.json')
 var shipDetails = require('../../fixtures/shipmentData.json')
 
 describe('Checkout Page Automation', () => {
-
 
     before(function () {
         cy.clearAllCookies()
@@ -25,7 +24,6 @@ describe('Checkout Page Automation', () => {
     })
 
     it('Proceed to checkout', () => {
-        
         checkoutPageObj.getProceedToPayment().should('be.visible')
         checkoutPageObj.goToCheckoutPage()
         cy.wait(4000)
@@ -38,14 +36,10 @@ describe('Checkout Page Automation', () => {
         checkoutPageObj.getSuccessMessage().should('have.text','Thank you for your purchase!')
 
         cy.get('.checkout-success').then(($ele)=>{
-
             cy.log($ele.text())
         })
-
       
     })
-
-    
 
 
 })

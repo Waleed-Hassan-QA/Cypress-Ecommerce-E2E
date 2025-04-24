@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-export class cartPage{
+export class CartPage{
 
     locators = {    
 

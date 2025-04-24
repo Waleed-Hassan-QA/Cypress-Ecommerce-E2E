@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-export class checkoutPage{
+export class CheckoutPage{
 
     locators = {    
         showCart: ".showcart",
