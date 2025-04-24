@@ -27,4 +27,26 @@ export class AddToCartPage{
     verifySuccessMessage(){
         return cy.get(this.Locators.successMessage);
     }
+
+    getSearchProductFromGrid(ProductName){
+
+      cy.get('#search').type('Orion Two-Tone Fitted Jacket')
+      cy.get('button[title="Search"]').click()
+      cy.scrollTo(0,70)
+  
+      cy.get('div[class="products wrapper grid products-grid"]')
+      .find('div[class="product-item-info"]')
+      .find('div[class="product details product-item-details"]')
+      .find('a[class="product-item-link"]')
+                .each(($ele,index,list)=>{
+                  const txt = $ele.text().trim()
+                  if(txt.includes('Orion Two-Tone Fitted Jacket')){
+                    cy.log(index)
+                  } 
+       })
+
+    // cy.get('li[class="item product product-item"]').eq(1).realHover()
+    //cy.get('li[class="item product product-item"]').contains('Orion Two-Tone Fitted Jacket').click()
+
+    }
 }

@@ -7,7 +7,8 @@ locators = {
     password: '#password',
     confirmPassword: '#password-confirmation',
     createButton: 'button[title="Create an Account"]',
-    verifySuccessMessage: 'div[data-bind="html: $parent.prepareMessageForHtml(message.text)"]'
+    verifySuccessMessage: 'div[data-bind="html: $parent.prepareMessageForHtml(message.text)"]',
+    error:"div[data-bind='html: $parent.prepareMessageForHtml(message.text)']"
 }
 
 visitRegisterPage(){
@@ -43,5 +44,8 @@ getSuccessMessage(){
     return cy.get(this.locators.verifySuccessMessage)
 }
 
+getErrorMessage(){
+    return cy.get(this.locators.error)
+}
 
 }

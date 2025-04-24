@@ -3,7 +3,7 @@ import loginData from "../../fixtures/loginData.json"
 import productData from "../../fixtures/productData.json"
 
 const addTocartObj = new AddToCartPage()
-
+const data = {}
 //hello
 describe('Search & Add Product',()=>{
 
@@ -21,5 +21,7 @@ before(function(){
     addTocartObj.verifySuccessMessage().should('contain',productData.message.successMessage)
                                        .and('contain',productData.product.productName)
     })
+
+
 
 })

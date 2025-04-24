@@ -1,9 +1,10 @@
 {
     "fname": "Waleed",
     "lname": "Hassan",
-    "email": "Waleed23@gmail.com",
+    "email": "Waleed25@gmail.com",
     "password": "User@123",
     "confirmPassword": "User@123",
-    "expectedSuccessMessage": "Thank you for registering with Main Website Store."
+    "expectedSuccessMessage": "Thank you for registering with Main Website Store.",
+    "errorMessage": "There is already an account with this email address"
   }
   
