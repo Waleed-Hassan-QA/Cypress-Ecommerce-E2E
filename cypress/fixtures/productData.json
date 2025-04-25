@@ -26,7 +26,11 @@
     "message":{
 
           "successMessage": "You added"
-    }
+    },
  
+    "invalidSearch":{
+        "productName": "abc123gshx",
+        "noResult": "Your search returned no results."
+    }
   }
   
