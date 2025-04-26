@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:header": "npx cypress run --spec cypress/e2e/TestScriptsFiles/Header.cy.js",
-    "test:login": "npx cypress run --spec cypress/e2e/TestScriptsFiles/loginTest.cy.js",
+    "test:header": "npx cypress run --spec cypress/e2e/TestScriptsFiles/Header.cy.js --browser chrome",
+    "test:login": "npx cypress run --spec cypress/e2e/TestScriptsFiles/LoginTest.cy.js",
     "test:register":"npx cypress run --spec cypress/e2e/TestScriptsFiles/RegisterTest.cy.js",
     "test:addtocart": "npx cypress run --spec cypress/e2e/TestScriptsFiles/AddToCartTest.cy.js",
     "test:cart": "npx cypress run --spec cypress/e2e/TestScriptsFiles/CartTest.cy.js",
