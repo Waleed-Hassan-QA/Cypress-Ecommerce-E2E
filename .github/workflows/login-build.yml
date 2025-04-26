@@ -1,4 +1,4 @@
-name: End to End Testing
+name: Sanity Test 
 on: push
 jobs:
   cypress-run:
@@ -11,4 +11,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-            browser: chrome
+            command: npm run test:login
