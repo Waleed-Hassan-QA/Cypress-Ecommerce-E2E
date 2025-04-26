@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { header } from "../PageObjectFiles/header"
+import { header } from '../PageObjectFiles/header'
 const menu = require('../../fixtures/header.json')
 
 const headerObj = new header()
@@ -26,17 +26,12 @@ describe('Check the header of the website', () => {
         cy.url().should('contain', menu.sale)
     })
 
-    
+
     it('Check the items present on header', () => {
         headerObj.getLogo().should('be.visible')
         headerObj.getSigIn().should('be.visible').should('contain','Sign In')
         headerObj.getSignUp().should('be.visible').should('contain','Create an Account')
         headerObj.getSearchInput().should('be.visible')
     })
-
-    
-
-   
-
 
 })
