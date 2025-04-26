@@ -4,11 +4,6 @@
   "main": "index.js",
   "scripts": {
     "test:header": "npx cypress run --spec cypress/e2e/TestScriptsFiles/Header.cy.js",
-    "test:login": "npx cypress run --spec cypress/e2e/TestScriptsFiles/loginTest.cy.js",
-    "test:register":"npx cypress run --spec cypress/e2e/TestScriptsFiles/RegisterTest.cy.js",
-    "test:addtocart": "npx cypress run --spec cypress/e2e/TestScriptsFiles/AddToCartTest.cy.js",
-    "test:cart": "npx cypress run --spec cypress/e2e/TestScriptsFiles/CartTest.cy.js",
-    "test:checkout": "npx cypress run --spec cypress/e2e/TestScriptsFiles/CheckoutTest.cy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
