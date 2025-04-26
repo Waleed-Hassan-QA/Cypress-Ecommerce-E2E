@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { CheckoutPage } from "../PageObjectFiles/checkoutPage"
+import { CheckoutPage } from "../PageObjectFiles/CheckoutPage"
 import { AddToCartPage } from "../PageObjectFiles/AddToCartPage"
 
 const checkoutPageObj = new CheckoutPage()
