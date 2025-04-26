@@ -1,4 +1,4 @@
-name: Sanity End-to-end tests
+name: Sanity Test
 on: push
 jobs:
   cypress-run:
