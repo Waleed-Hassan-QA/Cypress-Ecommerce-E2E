@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 export class header{
 
 locators = {
@@ -9,6 +10,7 @@ locators = {
     menuItems:'a[class="level-top ui-corner-all"]'
 
 }
+
 
 
 getLogo(){
@@ -32,6 +34,42 @@ getMenu(){
 }
 
 
+
+findBrokenLink(){
+    let totalLinks = 0
+    let brokenLink = 0
+    let activeLink = 0
+
+cy.get('a').each(($link,index)=>{
+  
+    const href = $link.attr('href')
+    
+    if (href) {
+        cy.request({url: href}).then((response)=>{
+            if(response.status >= 400){
+                cy.log($link.text() +' = Link is Broken ')
+                brokenLink++
+            }
+            else{
+                cy.log($link.text() +' = Link is Not Broken ')
+                activeLink++
+            }
+        })
+
+    }
+
+}).then(($links)=>{
+       
+    totalLinks = $links.length
+    
+    cy.log('Total Links = ' + totalLinks)
+    cy.log('Active Links = ' + activeLink)
+    cy.log('Broken Links = ' + brokenLink)
+
+})
+
+
+}
 
 
 

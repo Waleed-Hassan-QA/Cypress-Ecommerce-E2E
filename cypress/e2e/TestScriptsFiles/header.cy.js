@@ -5,6 +5,7 @@ const menu = require('../../fixtures/header.json')
 
 const headerObj = new header()
 
+
 describe('Check the header of the website', () => {
 
     beforeEach(function () {
@@ -32,6 +33,12 @@ describe('Check the header of the website', () => {
         headerObj.getSigIn().should('be.visible').should('contain','Sign In')
         headerObj.getSignUp().should('be.visible').should('contain','Create an Account')
         headerObj.getSearchInput().should('be.visible')
+    })
+
+    it.skip('Check If there is broken links', () => {
+       
+        headerObj.findBrokenLink()
+     
     })
 
 })
