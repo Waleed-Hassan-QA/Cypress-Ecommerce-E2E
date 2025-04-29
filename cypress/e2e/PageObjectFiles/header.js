@@ -41,17 +41,20 @@ findBrokenLink(){
     let activeLink = 0
 
 cy.get('a').each(($link,index)=>{
-  
+
     const href = $link.attr('href')
     
     if (href) {
         cy.request({url: href}).then((response)=>{
+
+            totalLinks++
+            
             if(response.status >= 400){
-                cy.log($link.text() +' = Link is Broken ')
+                cy.log(index + 1 +' = Link is Broken ** ' + href)
                 brokenLink++
             }
             else{
-                cy.log($link.text() +' = Link is Not Broken ')
+                cy.log(index + 1 +' = Link is Fine ** ' + href)
                 activeLink++
             }
         })
@@ -60,7 +63,7 @@ cy.get('a').each(($link,index)=>{
 
 }).then(($links)=>{
        
-    totalLinks = $links.length
+  //  totalLinks = $links.length
     
     cy.log('Total Links = ' + totalLinks)
     cy.log('Active Links = ' + activeLink)
