@@ -1,7 +1,7 @@
 {
     "fname": "Waleed",
     "lname": "Hassan",
-    "email": "ww@gmail.com",
+    "email": "demo02@gmail.com",
     "password": "User@123",
     "confirmPassword": "User@123",
     "expectedSuccessMessage": "Thank you for registering with Main Website Store.",
