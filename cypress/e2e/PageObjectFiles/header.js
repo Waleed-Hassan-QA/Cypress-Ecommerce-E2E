@@ -11,8 +11,6 @@ locators = {
 
 }
 
-
-
 getLogo(){
     return cy.get(this.locators.logo)
 }
