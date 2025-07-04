@@ -17,7 +17,7 @@ export class CheckoutPage{
         // Other than form
         selectShippingMethod:"input[value='flatrate_flatrate']",
         nextButton:".button.action.continue.primary",
-        placeOrder:"button[title='Place Order']",
+        placeOrder:'button[title="Place Order"]',
         checkoutSuccessMessage:".base"
 
     }
@@ -56,7 +56,7 @@ enterShippingDetails(com_name,street,city,state,zipcode,country,phone){
  }
 
  proceedToPlaceOrder(){
-   cy.get(this.locators.placeOrder).click()
+   cy.get(this.locators.placeOrder, {timeout:5000}).click()
  }
 
  getSuccessMessage(){

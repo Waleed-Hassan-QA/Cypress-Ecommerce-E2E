@@ -8,8 +8,11 @@ export class AddToCartPage{
         color: '.swatch-opt-318 > .swatch-attribute.color > .swatch-attribute-options > #option-label-color-93-item-49',
         find_addtocart:'body > div:nth-child(5) > main:nth-child(4) > div:nth-child(4) > div:nth-child(1) > div:nth-child(5) > div:nth-child(3) > ol:nth-child(1) > li:nth-child(1) > div:nth-child(1)',
         addtocart: 'body > div:nth-child(5) > main:nth-child(4) > div:nth-child(4) > div:nth-child(1) > div:nth-child(5) > div:nth-child(3) > ol:nth-child(1) > li:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > form:nth-child(1) > button:nth-child(4)',
+        addtocartButtonViaContain :'Add to Cart',
         successMessage:'div[data-bind="html: $parent.prepareMessageForHtml(message.text)"]',
-        noResultMessage:'div[class="message notice"] div'
+        noResultMessage:'div[class="message notice"] div',
+        searchCart :'img[alt="Orion Two-Tone Fitted Jacket"]',
+       
     }
     
   searchProduct(productName){
@@ -21,8 +24,8 @@ export class AddToCartPage{
     cy.scrollTo(0, 50)
     cy.get(this.Locators.size).first().click()
     cy.get(this.Locators.color).first().click()
-    cy.get(this.Locators.find_addtocart).realHover()
-    cy.get(this.Locators.addtocart).click({force: true})
+    cy.get(this.Locators.searchCart).realHover()
+    cy.contains(this.Locators.addtocartButtonViaContain).click({force: true})
     }
 
     verifySuccessMessage(){

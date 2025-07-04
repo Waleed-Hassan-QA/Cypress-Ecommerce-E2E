@@ -5,6 +5,14 @@ const registerObj = new registerPage()
 
 describe('Registration flow',()=>{
 
+ function generateRandomEmail() {
+        const randomString = Math.random().toString(36).substring(2, 8)
+        const email = randomString + "@gmail.com"
+        return email
+    }
+
+    registerData.email = generateRandomEmail()
+
   it('create a new user account',()=>{
       registerObj.visitRegisterPage()
       registerObj.enterFirstName(registerData.fname)
