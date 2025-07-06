@@ -11,6 +11,15 @@ locators = {
     error:"div[data-bind='html: $parent.prepareMessageForHtml(message.text)']"
 }
 
+validationErrors = {
+
+    firstNameRequired: '#firstname-error',
+    lastNameRequired: '#lastname-error',
+    emailRequired: '#email_address-error', // Same is being used for required and invalid format of email
+    passwordRequired: '#password-error',
+    confirmPasswordRequired: '#password-confirmation-error',
+}
+
 visitRegisterPage(){
     cy.visit('/' + Cypress.env('register_Url'))
 }
@@ -24,7 +33,7 @@ enterLastName(lname){
 }
 
 enterEmail(email){
-    cy.get(this.locators.email).type(email)
+    cy.get(this.locators.email).clear().type(email)
 }
 
 
@@ -47,5 +56,28 @@ getSuccessMessage(){
 getErrorMessage(){
     return cy.get(this.locators.error)
 }
+
+
+
+getFirstnameError(){
+   return cy.get(this.validationErrors.firstNameRequired)
+}
+getLastnameError(){
+   return  cy.get(this.validationErrors.lastNameRequired)
+}
+getEmailError(){
+   return cy.get(this.validationErrors.emailRequired)
+}
+getPasswordError(){
+    return cy.get(this.validationErrors.passwordRequired)
+}
+getConfirmPasswordError(){
+    return cy.get(this.validationErrors.confirmPasswordRequired)
+}
+getInvalidEmail_FormatError(){
+    return cy.get(this.validationErrors.emailRequired)
+}
+
+
 
 }
