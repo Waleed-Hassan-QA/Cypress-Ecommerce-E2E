@@ -13,7 +13,7 @@ describe('Registration flow', () => {
 
   registerData.user.email = generateRandomEmail()
 
-  it('create a new user account', () => {
+  it('Create a new user account', () => {
     registerObj.visitRegisterPage()
     registerObj.enterFirstName(registerData.user.fname)
     registerObj.enterLastName(registerData.user.lname)
@@ -24,7 +24,7 @@ describe('Registration flow', () => {
     registerObj.getSuccessMessage().should('have.text', registerData.user.expectedSuccessMessage)
   })
 
-  it('create an account with an existing email', () => {
+  it('Create an account with an existing email', () => {
     registerObj.visitRegisterPage()
     registerObj.enterFirstName(registerData.user.fname)
     registerObj.enterLastName(registerData.user.lname)
@@ -36,23 +36,24 @@ describe('Registration flow', () => {
     registerObj.getErrorMessage().should('contain', registerData.user.errorMessage)
   })
 
-  it('Verify Required Field Validations', () => {
+  it('Required fields || Validation Check', () => {
     registerObj.visitRegisterPage()
     registerObj.CreateAccount()
-    registerObj.getFirstnameError().should('be.visible').and('have.text', registerData.errors.requiredField)
-    registerObj.getLastnameError().should('be.visible').and('have.text', registerData.errors.requiredField)
-    registerObj.getEmailError().should('be.visible').and('have.text', registerData.errors.requiredField)
-    registerObj.getPasswordError().should('be.visible').and('have.text', registerData.errors.requiredField)
-    registerObj.getConfirmPasswordError().should('be.visible').and('have.text', registerData.errors.requiredField)
+    registerObj.required_Firstname_Field_Error().should('be.visible').and('have.text', registerData.errors.requiredField)
+    registerObj.required_Lastname_Field_Error().should('be.visible').and('have.text', registerData.errors.requiredField)
+    registerObj.required_Email_Field_Error().should('be.visible').and('have.text', registerData.errors.requiredField)
+    registerObj.required_Password_Field_Error().should('be.visible').and('have.text', registerData.errors.requiredField)
+    registerObj.required_ConfirmPassword_Field_Error().should('be.visible').and('have.text', registerData.errors.requiredField)
   })
 
-  it('Verify Invalid Email Formats Validation', () => {
+  it('Invalid email formats || Validation Check', () => {
 
     registerObj.visitRegisterPage()
     cy.wrap(['a', 'a b', 'ab@a', 'ab@1', 'ab@a.', 'a.com', '.com']).each((ele, index, list) => {
       registerObj.enterEmail(ele)
       registerObj.CreateAccount()
-      registerObj.getInvalidEmail_FormatError().should('be.visible').and('have.text', registerData.errors.invalidEmailFormat)
+      registerObj.check_InvalidEmail_Format_Error().should('be.visible')
+      .and('have.text', registerData.errors.invalidEmailFormat)
 
     })
 

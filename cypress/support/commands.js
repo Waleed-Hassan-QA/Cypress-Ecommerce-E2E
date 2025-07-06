@@ -26,17 +26,10 @@
 
 Cypress.Commands.add('login', (email, password) => {
 
-    cy.session([email, password], () => {
         cy.visit('/' + Cypress.env('login_Url'))
         cy.get('#email').clear().type(email)
         cy.get('#pass').clear().type(password)
         cy.get('#send2').click()
-
-    },{
-        cacheAcrossSpecs: true
-    })
-
-
 
 
 })

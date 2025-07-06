@@ -58,23 +58,25 @@ getErrorMessage(){
 }
 
 
+// ----- Handing Validation Errors
 
-getFirstnameError(){
+
+required_Firstname_Field_Error(){
    return cy.get(this.validationErrors.firstNameRequired)
 }
-getLastnameError(){
+required_Lastname_Field_Error(){
    return  cy.get(this.validationErrors.lastNameRequired)
 }
-getEmailError(){
+required_Email_Field_Error(){
    return cy.get(this.validationErrors.emailRequired)
 }
-getPasswordError(){
+required_Password_Field_Error(){
     return cy.get(this.validationErrors.passwordRequired)
 }
-getConfirmPasswordError(){
+required_ConfirmPassword_Field_Error(){
     return cy.get(this.validationErrors.confirmPasswordRequired)
 }
-getInvalidEmail_FormatError(){
+check_InvalidEmail_Format_Error(){
     return cy.get(this.validationErrors.emailRequired)
 }
 
