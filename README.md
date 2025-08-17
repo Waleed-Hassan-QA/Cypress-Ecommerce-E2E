@@ -1,4 +1,4 @@
-# Cypress e-Commerce Testing framework using (POM)
+# E-Commerce Automation Testing framework using Cypress (POM)
 
 This project automates the end-to-end testing of an e-commerce application using Cypress with a Page Object Model (POM) design pattern. It covers all major functional flows including negative test cases with assertions.
 
